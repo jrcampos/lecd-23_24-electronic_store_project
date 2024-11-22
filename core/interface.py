@@ -46,6 +46,7 @@ def start(context):
         {'name': 'Basic Data Manipulation', 'submenu': [
             {'name': 'Add Product Type', 'callback': getattr(context, 'add_product_type')},
             {'name': 'Add Product', 'callback': getattr(context, 'add_product')},
+            {'name': 'List Clients', 'callback': getattr(context, 'list_clients')},
             {'name': 'Add Client', 'callback': getattr(context, 'add_client')},
             {'name': 'Add Store', 'callback': getattr(context, 'add_store')},
             {'name': 'Add Purchase', 'callback': getattr(context, 'add_purchase')},

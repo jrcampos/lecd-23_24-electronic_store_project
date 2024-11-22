@@ -108,6 +108,14 @@ def add_store():
     print('TODO: implement add_store\n\n')
     pass
 
+def list_clients():
+    data = database()
+
+    print('TODO: redo list_customers to be a prettier presentation\n\n')
+
+    for c in data['customers']:
+        print(c)
+
 
 def add_client():
     """
