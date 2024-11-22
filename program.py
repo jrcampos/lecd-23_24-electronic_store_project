@@ -3,45 +3,71 @@ import sys
 import core.interface
 import core.utils
 
+
+def load_customers():
+    # Load customers data from customers.csv; you can also use dictionaries, see what is best
+
+    with open('data/customers.csv') as f:
+        customers = f.readlines()
+
+    return customers
+
+
+def load_stores():
+    print('TODO: implement load_stores\n\n')
+
+    # Load stores data from stores.csv; you can also use dictionaries, see what is best
+    pass
+
+
+def load_products_categories():
+    print('TODO: implement load_stores\n\n')
+
+    # Load products categories data from products_categories.csv; you can also use dictionaries, see what is best
+    pass
+
+
+def load_products():
+    print('TODO: implement load_products\n\n')
+
+    # Load produtcs data from products.csv; you can also use dictionaries, see what is best
+    pass
+
+
+def load_purchases():
+    print('TODO: implement load_purchases\n\n')
+
+    # Load stores data from purchases.csv; you can also use dictionaries, see what is best
+    pass
+
+
+def load_data():
+    data = {}
+
+    data['customers'] = load_customers()
+    data['stores'] = load_stores()
+    data['product_categories'] = load_products_categories()
+    data['products'] = load_products()
+    data['purchases'] = load_purchases()
+
+    return data
+
+
 @core.utils.static_vars(data=None)
-def load():
+def database():
     """
-    Loads data from file if it not yet loaded.
-    Otherwise, it will return a static variable containing the data previously loaded.
+    Returns the application database
 
     :param: No parameters.
-    :return: A dictionary with the loaded data
+    :return: A dictionary with the application data
     :rtype: dictionary
     """
 
-    print('TODO: implement load\n\n')
+    # first time this function is called, load the data
+    if database.data == None:
+        database.data = load_data()
 
-    if load.data == None:
-        # first time this function is called, load the data
-        load.data = {}
-
-        # Load customers data from customers.csv; you can also use dictionaries, see what is best
-        Customers = []
-        load.data['customers'] = Customers
-
-        # Load stores data from stores.csv; you can also use dictionaries, see what is best
-        Stores = []
-        load.data['stores'] = Stores
-
-        # Load products categories data from product_categories.csv; you can also use dictionaries, see what is best
-        ProductCategories = []
-        load.data['product_categories'] = ProductCategories
-
-        # Load products data from products.csv; you can also use dictionaries, see what is best
-        Products = []
-        load.data['products'] = Products
-
-        # Load purchases data from purchases.csv; you can also use dictionaries, see what is best
-        Purchases = []
-        load.data['purchases'] = Purchases
-
-    return load.data
-
+    return database.data
 
 
 '''
