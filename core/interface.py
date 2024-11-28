@@ -46,8 +46,8 @@ def start(context):
         {'name': 'Basic Data Manipulation', 'submenu': [
             {'name': 'Add Product Type', 'callback': getattr(context, 'add_product_type')},
             {'name': 'Add Product', 'callback': getattr(context, 'add_product')},
-            {'name': 'List Clients', 'callback': getattr(context, 'list_clients')},
-            {'name': 'Add Client', 'callback': getattr(context, 'add_client')},
+            {'name': 'List Customers', 'callback': getattr(context, 'list_customers')},
+            {'name': 'Add Customer', 'callback': getattr(context, 'add_customer')},
             {'name': 'Add Store', 'callback': getattr(context, 'add_store')},
             {'name': 'Add Purchase', 'callback': getattr(context, 'add_purchase')},
             {'name': 'Save Data', 'callback': getattr(context, 'save')},
@@ -60,8 +60,8 @@ def start(context):
 
         {'name': 'Explore Data', 'submenu': [
             {'name': 'Analytical', 'submenu': [
-                {'name': 'What is the average spent per client?', 'callback': getattr(context, 'explore_data_average_spent_client')},
-                {'name': 'Which client spent the most?', 'callback': getattr(context, 'explore_data_client_most_spent')},
+                {'name': 'What is the average spent per customer?', 'callback': getattr(context, 'explore_data_average_spent_customer')},
+                {'name': 'Which customer spent the most?', 'callback': getattr(context, 'explore_data_customer_most_spent')},
                 {'name': 'What product was most bought per month?', 'callback': getattr(context, 'explore_data_best_product_month')},
                 {'name': 'Sales per product per month', 'callback': getattr(context, 'explore_data_sales_product_month')},
             ]},

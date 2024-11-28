@@ -142,9 +142,9 @@ def add_store():
     pass
 
 
-def list_clients():
+def list_customers():
     """
-    Shows all clients in the default output
+    Shows all customers in the default output
     """
     data = database()
 
@@ -154,15 +154,15 @@ def list_clients():
         print(c)
 
 
-def add_client():
+def add_customer():
     """
-    Adds a client to the list of clients (in memory).
+    Adds a customer to the list of customers (in memory).
     Get the details from the user using input(). Properly validate and cast all necessary inputs.
 
     Provide output to the user through print() statements.
     """
 
-    print('TODO: implement add_client\n\n')
+    print('TODO: implement add_customer\n\n')
     pass
 
 
@@ -203,7 +203,7 @@ def report_of_sales_per_product():
 def report_of_sales_per_store():
     """
     Generates the report of sales per store.
-    Save the report to a file. Include relevant details such as average sales number/value per month, average number of clients, ....
+    Save the report to a file. Include relevant details such as average sales number/value per month, average number of customers, ....
     """
 
     print('TODO: implement report_of_sales_per_store\n\n')
@@ -217,26 +217,26 @@ Explore Data menu functions
 '''
 Explore Data --> Analytical menu functions   
 '''
-def explore_data_average_spent_client():
+def explore_data_average_spent_customer():
     """
-    Compute what is the average spent overall by clients and the standard deviation.
+    Compute what is the average spent overall by customers and the standard deviation.
 
     Provide output to the user through print() statements.
     """
 
-    print('TODO: implement explore_data_average_spent_client\n\n')
+    print('TODO: implement explore_data_average_spent_customer\n\n')
     pass
 
 
-def explore_data_client_most_spent():
+def explore_data_customer_most_spent():
     """
-    Identify the client (include the name, NIF, ..., details) that overall spent more.
+    Identify the customer (include the name, NIF, ..., details) that overall spent more.
     This endpoint is similar to the previous, avoid duplicating code.
 
     Provide output to the user through print() statements.
     """
 
-    print('TODO: implement explore_data_client_most_spent\n\n')
+    print('TODO: implement explore_data_customer_most_spent\n\n')
     pass
 
 
