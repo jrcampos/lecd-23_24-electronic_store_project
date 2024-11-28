@@ -9,11 +9,10 @@ def load_customers():
     Loads customers from a file and returns a list of them.
     """
 
-    # Load customers data from customers.csv; you can also use dictionaries, see what is best
-    with open('data/customers.csv') as f:
-        customers = f.readlines()
+    print('TODO: implement load_customers\n\n')
 
-    return customers
+    # Load customers data from customers.csv; you can also use dictionaries, see what is best
+    pass
 
 
 def load_stores():
@@ -21,10 +20,11 @@ def load_stores():
     Loads stores from a file and returns a list of them.
     """
 
-    print('TODO: implement load_stores\n\n')
-
     # Load stores data from stores.csv; you can also use dictionaries, see what is best
-    pass
+    with open('data/stores.csv') as f:
+        stores = f.readlines()
+
+    return stores
 
 
 def load_products_categories():
@@ -160,8 +160,12 @@ def list_stores():
     Provide output to the user through print() statements.
     """
 
-    print('TODO: implement list_stores\n\n')
-    pass
+    data = database()
+
+    print('TODO: redo list_stores to be a prettier presentation\n\n')
+
+    for c in data['stores']:
+        print(c)
 
 
 def add_store():
@@ -182,12 +186,9 @@ def list_customers():
 
     Provide output to the user through print() statements.
     """
-    data = database()
 
-    print('TODO: redo list_customers to be a prettier presentation\n\n')
-
-    for c in data['customers']:
-        print(c)
+    print('TODO: implement list_customers\n\n')
+    pass
 
 
 def add_customer():
