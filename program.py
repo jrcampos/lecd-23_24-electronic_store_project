@@ -3,59 +3,141 @@ import sys
 import core.interface
 import core.utils
 
-@core.utils.static_vars(data=None)
-def load():
+
+def load_customers():
     """
-    Loads data from file if it not yet loaded.
-    Otherwise, it will return a static variable containing the data previously loaded.
+    Loads customers from a file and returns a list of them.
+    """
+
+    print('TODO: implement load_customers\n\n')
+
+    # Load customers data from customers.csv; you can also use dictionaries, see what is best
+    pass
+
+
+def load_stores():
+    """
+    Loads stores from a file and returns a list of them.
+    """
+
+    # Load stores data from stores.csv; you can also use dictionaries, see what is best
+    with open('data/stores.csv') as f:
+        stores = f.readlines()
+
+    return stores
+
+
+def load_products_categories():
+    """
+    Loads products categories from a file and returns a list of them.
+    """
+
+    print('TODO: implement load_products_categories\n\n')
+
+    # Load products categories data from products_categories.csv; you can also use dictionaries, see what is best
+    pass
+
+
+def load_products():
+    """
+    Loads products from a file and returns a list of them.
+    """
+
+    print('TODO: implement load_products\n\n')
+
+    # Load products data from products.csv; you can also use dictionaries, see what is best
+    pass
+
+
+def load_purchases():
+    """
+    Loads purchases from a file and returns a list of them.
+    """
+
+    print('TODO: implement load_purchases\n\n')
+
+    # Load stores data from purchases.csv; you can also use dictionaries, see what is best
+    pass
+
+
+def load_data():
+    """
+    Loads all data from files and returns it in a dictionary where the keys are
+    data type e and the values are a list of that data. The dictionary keys are:
+    customers, stores, product_categories, products, and purchases.
 
     :param: No parameters.
-    :return: A dictionary with the loaded data
+    :return: A dictionary with the application data
+    :rtype: dictionary
+    """
+    data = {}
+
+    data['customers'] = load_customers()
+    data['stores'] = load_stores()
+    data['product_categories'] = load_products_categories()
+    data['products'] = load_products()
+    data['purchases'] = load_purchases()
+
+    return data
+
+
+@core.utils.static_vars(data=None)
+def database():
+    """
+    Returns the application database
+
+    Loads the data if it is not already loaded and populates the database in memory.
+    Otherwise, it will return the database in memory.
+
+    See load_data() function.
+
+    :param: No parameters.
+    :return: A dictionary with the application data
     :rtype: dictionary
     """
 
-    print('TODO: implement load\n\n')
+    # first time this function is called, load the data
+    if database.data == None:
+        database.data = load_data()
 
-    if load.data == None:
-        # first time this function is called, load the data
-        load.data = {}
-
-        # Load customers data from customers.csv; you can also use dictionaries, see what is best
-        Customers = []
-        load.data['customers'] = Customers
-
-        # Load stores data from stores.csv; you can also use dictionaries, see what is best
-        Stores = []
-        load.data['stores'] = Stores
-
-        # Load products categories data from product_categories.csv; you can also use dictionaries, see what is best
-        ProductCategories = []
-        load.data['product_categories'] = ProductCategories
-
-        # Load products data from products.csv; you can also use dictionaries, see what is best
-        Products = []
-        load.data['products'] = Products
-
-        # Load purchases data from purchases.csv; you can also use dictionaries, see what is best
-        Purchases = []
-        load.data['purchases'] = Purchases
-
-    return load.data
-
+    return database.data
 
 
 '''
 Basic Data Manipulation menu functions  
 '''
-def add_product_type():
+
+def list_products_categories():
     """
-    Adds a product type to the list of products (in memory).
+    Shows all products categories in the default output.
+
+    Provide output to the user through print() statements.
+    """
+
+    print('TODO: implement list_products_categories\n\n')
+    pass
+
+
+def add_product_category():
+    """
+    Adds a product category to the list of products categories (in memory).
     Get the details from the user using input(). Properly validate and cast all necessary inputs.
 
     Provide output to the user through print() statements.
     """
 
-    print('TODO: implement add_product_type\n\n')
+    print('TODO: implement add_product_category\n\n')
+    pass
+
+
+def list_products():
+    """
+    Shows all products in the default output.
+
+    Provide output to the user through print() statements.
+    """
+
+    print('TODO: implement list_products\n\n')
     pass
 
 
@@ -71,6 +153,21 @@ def add_product():
     pass
 
 
+def list_stores():
+    """
+    Shows all stores in the default output.
+
+    Provide output to the user through print() statements.
+    """
+
+    data = database()
+
+    print('TODO: redo list_stores to be a prettier presentation\n\n')
+
+    for c in data['stores']:
+        print(c)
+
+
 def add_store():
     """
     Adds a store to the list of stores (in memory).
@@ -83,15 +180,37 @@ def add_store():
     pass
 
 
-def add_client():
+def list_customers():
     """
-    Adds a client to the list of clients (in memory).
+    Shows all customers in the default output.
+
+    Provide output to the user through print() statements.
+    """
+
+    print('TODO: implement list_customers\n\n')
+    pass
+
+
+def add_customer():
+    """
+    Adds a customer to the list of customers (in memory).
     Get the details from the user using input(). Properly validate and cast all necessary inputs.
 
     Provide output to the user through print() statements.
     """
 
-    print('TODO: implement add_client\n\n')
+    print('TODO: implement add_customer\n\n')
+    pass
+
+
+def list_purchases():
+    """
+    Shows all purchases in the default output.
+
+    Provide output to the user through print() statements.
+    """
+
+    print('TODO: implement list_purchases\n\n')
     pass
 
 
@@ -132,7 +251,7 @@ def report_of_sales_per_product():
 def report_of_sales_per_store():
     """
     Generates the report of sales per store.
-    Save the report to a file. Include relevant details such as average sales number/value per month, average number of clients, ....
+    Save the report to a file. Include relevant details such as average sales number/value per month, average number of customers, ....
     """
 
     print('TODO: implement report_of_sales_per_store\n\n')
@@ -146,26 +265,26 @@ Explore Data menu functions
 '''
 Explore Data --> Analytical menu functions   
 '''
-def explore_data_average_spent_client():
+def explore_data_average_spent_customer():
     """
-    Compute what is the average spent overall by clients and the standard deviation.
+    Compute what is the average spent overall by customers and the standard deviation.
 
     Provide output to the user through print() statements.
     """
 
-    print('TODO: implement explore_data_average_spent_client\n\n')
+    print('TODO: implement explore_data_average_spent_customer\n\n')
     pass
 
 
-def explore_data_client_most_spent():
+def explore_data_customer_most_spent():
     """
-    Identify the client (include the name, NIF, ..., details) that overall spent more.
+    Identify the customer (include the name, NIF, ..., details) that overall spent more.
     This endpoint is similar to the previous, avoid duplicating code.
 
     Provide output to the user through print() statements.
     """
 
-    print('TODO: implement explore_data_client_most_spent\n\n')
+    print('TODO: implement explore_data_customer_most_spent\n\n')
     pass
 
 

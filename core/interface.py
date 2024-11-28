@@ -44,10 +44,15 @@ def start(context):
     """
     Items = [
         {'name': 'Basic Data Manipulation', 'submenu': [
-            {'name': 'Add Product Type', 'callback': getattr(context, 'add_product_type')},
-            {'name': 'Add Product', 'callback': getattr(context, 'add_product')},
-            {'name': 'Add Client', 'callback': getattr(context, 'add_client')},
+            {'name': 'List Stores', 'callback': getattr(context, 'list_stores')},
             {'name': 'Add Store', 'callback': getattr(context, 'add_store')},
+            {'name': 'List Customers', 'callback': getattr(context, 'list_customers')},
+            {'name': 'Add Customer', 'callback': getattr(context, 'add_customer')},
+            {'name': 'List Products', 'callback': getattr(context, 'list_products')},
+            {'name': 'Add Product', 'callback': getattr(context, 'add_product')},
+            {'name': 'List Products Categories', 'callback': getattr(context, 'list_products_categories')},
+            {'name': 'Add Product Category', 'callback': getattr(context, 'add_product_category')},
+            {'name': 'List Purchases', 'callback': getattr(context, 'list_purchases')},
             {'name': 'Add Purchase', 'callback': getattr(context, 'add_purchase')},
             {'name': 'Save Data', 'callback': getattr(context, 'save')},
         ]},
@@ -59,8 +64,8 @@ def start(context):
 
         {'name': 'Explore Data', 'submenu': [
             {'name': 'Analytical', 'submenu': [
-                {'name': 'What is the average spent per client?', 'callback': getattr(context, 'explore_data_average_spent_client')},
-                {'name': 'Which client spent the most?', 'callback': getattr(context, 'explore_data_client_most_spent')},
+                {'name': 'What is the average spent per customer?', 'callback': getattr(context, 'explore_data_average_spent_customer')},
+                {'name': 'Which customer spent the most?', 'callback': getattr(context, 'explore_data_customer_most_spent')},
                 {'name': 'What product was most bought per month?', 'callback': getattr(context, 'explore_data_best_product_month')},
                 {'name': 'Sales per product per month', 'callback': getattr(context, 'explore_data_sales_product_month')},
             ]},
