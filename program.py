@@ -5,8 +5,11 @@ import core.utils
 
 
 def load_customers():
-    # Load customers data from customers.csv; you can also use dictionaries, see what is best
+    """
+    Loads customers from a file and returns a list of them.
+    """
 
+    # Load customers data from customers.csv; you can also use dictionaries, see what is best
     with open('data/customers.csv') as f:
         customers = f.readlines()
 
@@ -14,6 +17,10 @@ def load_customers():
 
 
 def load_stores():
+    """
+    Loads stores from a file and returns a list of them.
+    """
+
     print('TODO: implement load_stores\n\n')
 
     # Load stores data from stores.csv; you can also use dictionaries, see what is best
@@ -21,6 +28,10 @@ def load_stores():
 
 
 def load_products_categories():
+    """
+    Loads products categories from a file and returns a list of them.
+    """
+
     print('TODO: implement load_stores\n\n')
 
     # Load products categories data from products_categories.csv; you can also use dictionaries, see what is best
@@ -28,13 +39,21 @@ def load_products_categories():
 
 
 def load_products():
+    """
+    Loads products from a file and returns a list of them.
+    """
+
     print('TODO: implement load_products\n\n')
 
-    # Load produtcs data from products.csv; you can also use dictionaries, see what is best
+    # Load products data from products.csv; you can also use dictionaries, see what is best
     pass
 
 
 def load_purchases():
+    """
+    Loads purchases from a file and returns a list of them.
+    """
+
     print('TODO: implement load_purchases\n\n')
 
     # Load stores data from purchases.csv; you can also use dictionaries, see what is best
@@ -42,6 +61,15 @@ def load_purchases():
 
 
 def load_data():
+    """
+    Loads all data from files and returns it in a dictionary where the keys are
+    data type e and the values are a list of that data. The dictionary keys are:
+    customers, stores, product_categories, products, and purchases.
+
+    :param: No parameters.
+    :return: A dictionary with the application data
+    :rtype: dictionary
+    """
     data = {}
 
     data['customers'] = load_customers()
@@ -57,6 +85,11 @@ def load_data():
 def database():
     """
     Returns the application database
+
+    Loads the data if it is not already loaded and populates the database in memory.
+    Otherwise, it will return the database in memory.
+
+    See load_data() function.
 
     :param: No parameters.
     :return: A dictionary with the application data
@@ -108,7 +141,11 @@ def add_store():
     print('TODO: implement add_store\n\n')
     pass
 
+
 def list_clients():
+    """
+    Shows all clients in the default output
+    """
     data = database()
 
     print('TODO: redo list_customers to be a prettier presentation\n\n')
