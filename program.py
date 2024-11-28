@@ -106,6 +106,18 @@ def database():
 '''
 Basic Data Manipulation menu functions  
 '''
+
+def list_products_categories():
+    """
+    Shows all products categories in the default output.
+
+    Provide output to the user through print() statements.
+    """
+
+    print('TODO: implement list_products_categories\n\n')
+    pass
+
+
 def add_product_type():
     """
     Adds a product type to the list of products (in memory).
@@ -118,6 +130,17 @@ def add_product_type():
     pass
 
 
+def list_products():
+    """
+    Shows all products in the default output.
+
+    Provide output to the user through print() statements.
+    """
+
+    print('TODO: implement list_products\n\n')
+    pass
+
+
 def add_product():
     """
     Adds a product to the list of products (in memory).
@@ -127,6 +150,17 @@ def add_product():
     """
 
     print('TODO: implement add_product\n\n')
+    pass
+
+
+def list_stores():
+    """
+    Shows all stores in the default output.
+
+    Provide output to the user through print() statements.
+    """
+
+    print('TODO: implement list_stores\n\n')
     pass
 
 
@@ -144,7 +178,9 @@ def add_store():
 
 def list_customers():
     """
-    Shows all customers in the default output
+    Shows all customers in the default output.
+
+    Provide output to the user through print() statements.
     """
     data = database()
 
@@ -163,6 +199,17 @@ def add_customer():
     """
 
     print('TODO: implement add_customer\n\n')
+    pass
+
+
+def list_purchases():
+    """
+    Shows all purchases in the default output.
+
+    Provide output to the user through print() statements.
+    """
+
+    print('TODO: implement list_purchases\n\n')
     pass
 
 
