@@ -44,10 +44,10 @@ def start(context):
     """
     Items = [
         {'name': 'Basic Data Manipulation', 'submenu': [
-            {'name': 'Add Product Type', 'callback': getattr(context, 'add_product_type')},
-            {'name': 'Add Product', 'callback': getattr(context, 'add_product')},
             {'name': 'List Customers', 'callback': getattr(context, 'list_customers')},
             {'name': 'Add Customer', 'callback': getattr(context, 'add_customer')},
+            {'name': 'Add Product', 'callback': getattr(context, 'add_product')},
+            {'name': 'Add Product Type', 'callback': getattr(context, 'add_product_type')},
             {'name': 'Add Store', 'callback': getattr(context, 'add_store')},
             {'name': 'Add Purchase', 'callback': getattr(context, 'add_purchase')},
             {'name': 'Save Data', 'callback': getattr(context, 'save')},
