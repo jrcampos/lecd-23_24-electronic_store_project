@@ -49,7 +49,7 @@ def start(context):
             {'name': 'List Products', 'callback': getattr(context, 'list_products')},
             {'name': 'Add Product', 'callback': getattr(context, 'add_product')},
             {'name': 'List Products Categories', 'callback': getattr(context, 'list_products_categories')},
-            {'name': 'Add Product Type', 'callback': getattr(context, 'add_product_type')},
+            {'name': 'Add Product Category', 'callback': getattr(context, 'add_product_category')},
             {'name': 'List Stores', 'callback': getattr(context, 'list_stores')},
             {'name': 'Add Store', 'callback': getattr(context, 'add_store')},
             {'name': 'List Purchases', 'callback': getattr(context, 'list_purchases')},

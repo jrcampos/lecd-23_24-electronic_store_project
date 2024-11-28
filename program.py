@@ -32,7 +32,7 @@ def load_products_categories():
     Loads products categories from a file and returns a list of them.
     """
 
-    print('TODO: implement load_stores\n\n')
+    print('TODO: implement load_products_categories\n\n')
 
     # Load products categories data from products_categories.csv; you can also use dictionaries, see what is best
     pass
@@ -118,15 +118,15 @@ def list_products_categories():
     pass
 
 
-def add_product_type():
+def add_product_category():
     """
-    Adds a product type to the list of products (in memory).
+    Adds a product category to the list of products categories (in memory).
     Get the details from the user using input(). Properly validate and cast all necessary inputs.
 
     Provide output to the user through print() statements.
     """
 
-    print('TODO: implement add_product_type\n\n')
+    print('TODO: implement add_product_category\n\n')
     pass
 
 
